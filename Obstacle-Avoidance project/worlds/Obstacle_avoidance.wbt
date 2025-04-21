@@ -1,0 +1,233 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/obstacles/protos/OilBarrel.proto"
+
+WorldInfo {
+  info [
+    "Willow Garage PR2 robot."
+    "The robot model includes 44 actuated joints, 6 cameras and 2 laser-scanners."
+  ]
+  title "PR2"
+  basicTimeStep 16
+  contactProperties [
+    ContactProperties {
+      material2 "pr2_material"
+      softCFM 1e-05
+    }
+  ]
+}
+Viewpoint {
+  orientation -0.464041923275883 0.4542851602556483 0.7604538688269784 1.8617003466478361
+  position -0.6826313838049582 -6.7278429997325695 7.985545667370454
+}
+OilBarrel {
+  translation 2.45 -1.01 0.44
+}
+OilBarrel {
+  translation 2.45 0.17 0.44
+  name "oil barrel(1)"
+}
+OilBarrel {
+  translation 2.45 1.39 0.44
+  name "oil barrel(2)"
+}
+OilBarrel {
+  translation 1.28 1.39 0.44
+  name "oil barrel(3)"
+}
+OilBarrel {
+  translation 0.09 1.39 0.44
+  name "oil barrel(4)"
+}
+OilBarrel {
+  translation -0.96 1.39 0.44
+  name "oil barrel(5)"
+}
+OilBarrel {
+  translation -0.96 0.36 0.44
+  name "oil barrel(6)"
+}
+OilBarrel {
+  translation -0.96 -0.56 0.44
+  name "oil barrel(7)"
+}
+OilBarrel {
+  translation -0.94 -1.74 0.44
+  name "oil barrel(8)"
+}
+Floor {
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Robot {
+  translation 1.788807527787543 -1.761783832578261 0.039860489353928885
+  rotation -1.0962099803723533e-08 7.13195988722217e-09 -0.9999999999999999 -1.9599224878470256
+  children [
+    DEF BODY Shape {
+      appearance PBRAppearance {
+        baseColor 0.545098 0.176471 0.917647
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.2 0.1 0.05
+      }
+    }
+    DEF WHEEL1 HingeJoint {
+      jointParameters HingeJointParameters {
+        position 1792.3143563212625
+        axis 0 1 0
+        anchor 0.05 0.06 0
+      }
+      device [
+        RotationalMotor {
+          name "wheel1"
+        }
+      ]
+      endPoint Solid {
+        translation 0.05 0.06 0
+        rotation -0.563592730000601 -0.5841064664213031 0.5841086119680902 4.168027828138499
+        children [
+          DEF WHEEL Shape {
+            appearance PBRAppearance {
+              baseColor 0.898039 0.0705882 0.25098
+              roughness 1
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.04
+              subdivision 24
+            }
+          }
+        ]
+        boundingObject USE WHEEL
+        physics Physics {
+        }
+        linearVelocity -0.0910463256605188 0.22205798549635933 2.8914131544780187e-08
+        angularVelocity -5.551445650433614 -2.2762806616426965 3.206956360568088e-06
+      }
+    }
+    DEF WHEEL2 HingeJoint {
+      jointParameters HingeJointParameters {
+        position 2150.4918507969815
+        axis 0 1 0
+        anchor 0.05 -0.06 0
+      }
+      device [
+        RotationalMotor {
+          name "wheel2"
+        }
+      ]
+      endPoint Solid {
+        translation 0.05 -0.06 0
+        rotation 0.5497690603483055 0.5906570143874809 -0.5906591839958203 2.136263977574456
+        children [
+          USE WHEEL
+        ]
+        name "solid(1)"
+        boundingObject USE WHEEL
+        physics Physics {
+        }
+        linearVelocity -0.09105558972633743 0.22205324151101313 -5.3269970216946006e-08
+        angularVelocity -5.551444147426351 -2.276284143345785 -4.9816484352518605e-06
+      }
+    }
+    DEF WHEEL3 HingeJoint {
+      jointParameters HingeJointParameters {
+        position 1792.3146137793083
+        axis 0 1 0
+        anchor -0.05 0.06 0
+      }
+      device [
+        RotationalMotor {
+          name "wheel3"
+        }
+      ]
+      endPoint Solid {
+        translation -0.05 0.06 0
+        rotation -0.5634936549321846 -0.5841542578723897 0.584156403594727 4.167877439076712
+        children [
+          USE WHEEL
+        ]
+        name "solid(2)"
+        boundingObject USE WHEEL
+        physics Physics {
+        }
+        linearVelocity -0.09104700729144073 0.22206233728465416 6.25501696938604e-08
+        angularVelocity -5.551445966330161 -2.276280791934454 3.266067276050167e-06
+      }
+    }
+    DEF WHEEL4 HingeJoint {
+      jointParameters HingeJointParameters {
+        position 2150.4921155504844
+        axis 0 1 0
+        anchor -0.05 -0.06 0
+      }
+      device [
+        RotationalMotor {
+          name "wheel4"
+        }
+      ]
+      endPoint Solid {
+        translation -0.05 -0.06 0
+        rotation 0.5496672387922604 0.5907043944283011 -0.5907065642106801 2.136420362360364
+        children [
+          USE WHEEL
+        ]
+        name "solid(3)"
+        boundingObject USE WHEEL
+        physics Physics {
+        }
+        linearVelocity -0.09105627227401615 0.22205764492258973 -1.9655277583907762e-08
+        angularVelocity -5.55144446629916 -2.276284276491954 -4.9200257601807015e-06
+      }
+    }
+    Camera {
+      translation 0.1 0 0.0315
+      children [
+        Pose {
+          translation -0.015 0 0
+          rotation -0.5771968951617173 -0.577656895078166 -0.5771968951617173 -2.093935
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.12549 0.65098 1
+                roughness 1
+                metalness 0
+              }
+              geometry Cylinder {
+                height 0.03
+                radius 0.01
+              }
+            }
+          ]
+        }
+      ]
+      fieldOfView 1
+      width 256
+      height 128
+      antiAliasing TRUE
+      recognition Recognition {
+        maxRange 1
+        maxObjects 1
+        frameColor 0.929412 0.831373 0
+        frameThickness 3
+      }
+    }
+  ]
+  name "MyRobot"
+  boundingObject USE BODY
+  physics Physics {
+    density -1
+    mass 1
+  }
+  controller "obstacle"
+  linearVelocity -0.09105129883042762 0.22205780251628338 4.632778361359389e-09
+  angularVelocity -5.827197515330391e-07 5.19783271944919e-07 -1.5376982425695558e-06
+}
