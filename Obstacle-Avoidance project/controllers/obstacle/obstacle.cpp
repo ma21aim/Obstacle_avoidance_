@@ -9,6 +9,7 @@
 #define IMAGE_WIDTH 320
 #define IMAGE_HEIGHT 240
 
+
 using namespace cv;
 
 int main() {
